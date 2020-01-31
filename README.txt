@@ -18,5 +18,8 @@ I will also be displaying instructions towards the bottom of the window.
 When you are incrementally constructing the convex hull, the H that displays below a point is for head,
 M is for middle, and T is for tail.
 
+If you are more of a visual person, I have provided a quick video demonstration of my program: 
+https://www.youtube.com/watch?v=9rDbOMWPxWU&t=9s
+
 Thank you for taking the time to read this.
 -Logan Metzen
