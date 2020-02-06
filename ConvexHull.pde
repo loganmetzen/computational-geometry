@@ -1,4 +1,4 @@
-//Logan Metzen U7649553
+//Logan Metzen
 
 import java.util.*; 
 
