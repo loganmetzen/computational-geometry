@@ -1,4 +1,4 @@
-//Logan Metzen U7649553
+//Logan Metzen
 
 class Polygon {
   
@@ -6,6 +6,8 @@ class Polygon {
      
    Polygon( ){  }
    
+   //Draws a line from current point to next point. i+1 would be out of bounds, 
+   //however, %N ensures that the last point connects back to the first point
    void draw(){
      int N = p.size();
      for(int i = 0; i < N; i++ ){
@@ -19,7 +21,5 @@ class Polygon {
    boolean isSimple(){ return false; }
    boolean ccw(){ return false; }
    boolean cw(){ return false; }
-   
-   
-   
+     
 }
