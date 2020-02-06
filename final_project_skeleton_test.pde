@@ -1,4 +1,4 @@
-//Logan Metzen U7649553
+//Logan Metzen
 
 import java.util.*;
 
@@ -208,6 +208,9 @@ void draw(){
       t = (Triangle)newData[3];
       t.draw();
       fill(0);
+      
+      //Reminder: Convex Hull is the minimum set of points enclosing all other points
+      //Do not need to include the middle point in a collinear triangle, because a collinear triangle is a straight line
       if(!t.cw()){
         textRHC("Testing triangle is CCW, push all of the points back onto the stack and form a new triangle with the next point in polar order" , 50, 10);
       }
@@ -241,7 +244,7 @@ void draw(){
   }
   
   
-  //Once convex hull is complete change color of edges from grey to black
+  //Once convex hull is complete change color of edges from gray to black
   if( convexHull.ccw() ) stroke( 100, 200, 100 ); 
   convexHull.draw();
   
@@ -266,6 +269,7 @@ void draw(){
       phase = "Complete Convex Hull";
   }
   
+  //Package into preset before animating another algorithm
   fill(0);
   stroke(0);
   textSize(18);
@@ -311,7 +315,7 @@ void keyPressed(){
   if( key == '+' ){ numOfPoints++; calculateConvexHull(); }
   if( key == '-' ){ numOfPoints = max( numOfPoints-1, 4 ); calculateConvexHull(); }
   
-  //The user can not generate points after they have started the demonstration (aka once they have pressed 'n' atleast once
+  //The user can not generate points after they have started the demonstration (once they have pressed 'n' atleast once)
   if( key == 'g' ){ 
     if(phaseNum == 0) { 
       generateRandomPoints(); 
