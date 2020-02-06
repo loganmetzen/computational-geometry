@@ -1,13 +1,13 @@
-//Logan Metzen U7649553
+//Logan Metzen
 
 class Point {
-  
+   //PVector is good for vector arithmetic
    public PVector p;
    boolean found = false;
    public Point( float x, float y ){
      p = new PVector(x,y);
    }
-
+   
    public Point(PVector _p0 ){
      p = _p0;
    }
@@ -19,16 +19,18 @@ class Point {
    }
    
    public void drawLeft(){
+     //Leftmost point should stand out -> shade of red
      fill(217, 15 , 30);
      ellipse ( p.x, p.y, 30, 30 );
-     //nofill(); Look up the other thing that makes/clears presets or make your own
      }
+     
    float getX(){ return p.x; }
    float getY(){ return p.y; }
    
    void setX(float x){ p.x = x; }
    void setY(float y){ p.y = y; }
    
+   //Used to give the illusion of an animation
    void incrementX(){
      p.x = p.x + 7;
    }
@@ -40,6 +42,7 @@ class Point {
    void decrementX(){
      p.x = p.x - 7;
    }
+   
    float x(){ return p.x; }
    float y(){ return p.y; }
    float angle;
